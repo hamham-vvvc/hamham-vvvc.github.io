@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文辅助写作 - 法学教育信息检索平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="logo">
+               <i class="fas fa-balance-scale"></i>
+               <span>法鼎鸣声</span>
+           </a>
+           <ul class="nav-links">
+               <li><a href="index.html">首页</a></li>
+              <li><a href="law.html">法律法规</a></li>
+              <li><a href="search.html">判例经纬</a></li>
+               <li><a href="teaching.html">教学资源</a></li>
+               <li><a href="paper.html" class="active">论文辅助写作</a></li>
+               <li><a href="question.html">提问板块</a></li>
+           </ul>
+        </div>
+    </nav>
+    
+    <main class="paper-main">
+        <div class="container">
+            <h2 class="section-title">论文辅助写作</h2>
+            <p class="section-subtitle">AI驱动的法学论文写作助手，提升您的学术写作效率</p>
+            
+            <div class="paper-sections">
+                <!-- 论文润色部分 -->
+                <div class="paper-section">
+                    <div class="section-header">
+                        <i class="fas fa-magic section-icon"></i>
+                        <h3>论文润色</h3>
+                    </div>
+                    <div class="section-content">
+                        <textarea id="paper-textarea" placeholder="请输入需要润色的论文内容（建议500-5000字）..." rows="8"></textarea>
+                        <div class="section-actions">
+                            <button id="polish-btn" class="btn">
+                                <i class="fas fa-sparkles"></i> 智能润色
+                            </button>
+                            <div class="word-count">字数: <span id="word-count">0</span></div>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h4>润色结果</h4>
+                                <button id="copy-polish" class="btn-icon">
+                                    <i class="far fa-copy"></i> 复制
+                                </button>
+                            </div>
+                            <div id="polished-text" class="result-content">
+                                <p class="placeholder-text">润色后的内容将显示在这里...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 法条补充部分 -->
+                <div class="paper-section">
+                    <div class="section-header">
+                        <i class="fas fa-gavel section-icon"></i>
+                        <h3>法条补充</h3>
+                    </div>
+                    <div class="section-content">
+                        <textarea id="paper-textarea-2" placeholder="请输入需要补充相关法条的论文段落..." rows="8"></textarea>
+                        <div class="section-actions">
+                            <button id="supplement-btn" class="btn">
+                                <i class="fas fa-search-plus"></i> 查找相关法条
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h4>相关法条建议</h4>
+                                <button id="copy-supplement" class="btn-icon">
+                                    <i class="far fa-copy"></i> 复制
+                                </button>
+                            </div>
+                            <div id="supplemented-text" class="result-content">
+                                <p class="placeholder-text">系统推荐的相关法条将显示在这里...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 可信度分析部分 -->
+                <div class="paper-section">
+                    <div class="section-header">
+                        <i class="fas fa-chart-line section-icon"></i>
+                        <h3>信息可信度分析</h3>
+                    </div>
+                    <div class="section-content">
+                        <textarea id="paper-textarea-3" placeholder="请输入需要分析可信度的论文内容..." rows="8"></textarea>
+                        <div class="section-actions">
+                            <button id="analyze-btn" class="btn">
+                                <i class="fas fa-search"></i> 分析可信度
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h4>分析结果</h4>
+                                <div class="score-badge">
+                                    可信度评分: <span id="score-value">--</span>/10
+                                </div>
+                            </div>
+                            <div id="analysis-result" class="result-content">
+                                <p class="placeholder-text">可信度分析结果和来源建议将显示在这里...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 多语种翻译部分 -->
+                <div class="paper-section">
+                    <div class="section-header">
+                        <i class="fas fa-globe section-icon"></i>
+                        <h3>多语种翻译</h3>
+                    </div>
+                    <div class="section-content">
+                        <textarea id="translation-textarea" placeholder="请输入需要翻译的内容..." rows="8"></textarea>
+                        <div class="section-actions">
+                            <button id="translate-btn" class="btn">
+                                <i class="fas fa-language"></i> 翻译
+                            </button>
+                        </div>
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h4>翻译结果</h4>
+                                <button id="copy-translation" class="btn-icon">
+                                    <i class="far fa-copy"></i> 复制
+                                </button>
+                            </div>
+                            <div id="translation-result" class="result-content">
+                                <p class="placeholder-text">翻译后的内容将显示在这里...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 法学教育信息检索平台 | 致力于推动法学教育智能化发展</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">隐私政策</a>
+                <a href="#">使用条款</a>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律法规 | 法鼎鸣声</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-balance-scale"></i>
+                法鼎鸣声
+            </a>
+           <ul class="nav-links">
+               <li><a href="index.html">首页</a></li>
+               <li><a href="law.html" class="active">法律法规</a></li>
+               <li><a href="search.html">判例经纬</a></li>
+               <li><a href="teaching.html">教学资源</a></li>
+               <li><a href="paper.html">论文辅助写作</a></li>
+               <li><a href="question.html">提问板块</a></li>
+           </ul>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>法律法规数据库</h1>
+            <p>全面收录中华人民共和国现行有效的法律法规</p>
+            <div class="law-buttons">
+                <a href="#search" class="btn">快速检索</a>
+                <a href="#categories" class="btn">分类浏览</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container" id="search">
+        <h2 class="section-title">法律检索</h2>
+        <div class="search-container">
+            <form id="law-search-form">
+                <input type="text" id="law-search-input" placeholder="输入法律名称、关键词或条文内容" required>
+                <select id="law-category">
+                    <option value="">全部类别</option>
+                    <option value="constitution">宪法相关</option>
+                    <option value="civil">民法商法</option>
+                    <option value="criminal">刑法</option>
+                    <option value="administrative">行政法</option>
+                    <option value="economic">经济法</option>
+                    <option value="social">社会法</option>
+                </select>
+                <button type="submit" id="law-search-btn"><i class="fas fa-search"></i> 检索</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="container" id="categories">
+        <h2 class="section-title">法律分类</h2>
+        
+        <!-- 宪法相关法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-landmark"></i> 宪法及相关法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国宪法</span>
+                        <span class="law-date">2018修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国立法法</span>
+                        <span class="law-date">2023修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国全国人民代表大会组织法</span>
+                        <span class="law-date">2021修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国香港特别行政区基本法</span>
+                        <span class="law-date">1990</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 民法商法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-handshake"></i> 民法商法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国民法典</span>
+                        <span class="law-date">2021.1.1</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国公司法</span>
+                        <span class="law-date">2023修订</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国合同法</span>
+                        <span class="law-date">1999</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国商标法</span>
+                        <span class="law-date">2019修正</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 刑法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-gavel"></i> 刑法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国刑法</span>
+                        <span class="law-date">2020修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国刑事诉讼法</span>
+                        <span class="law-date">2018修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国反洗钱法</span>
+                        <span class="law-date">2021</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 行政法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-file-contract"></i> 行政法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国行政许可法</span>
+                        <span class="law-date">2019修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国行政处罚法</span>
+                        <span class="law-date">2021修订</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国行政复议法</span>
+                        <span class="law-date">2023修订</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 经济法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-chart-line"></i> 经济法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国反垄断法</span>
+                        <span class="law-date">2022修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国消费者权益保护法</span>
+                        <span class="law-date">2013修正</span>
+                    </a>
+                </div>
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国税收征收管理法</span>
+                        <span class="law-date">2021修正</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 社会法 -->
+        <div class="law-category">
+            <h3><i class="fas fa-users"></i> 社会法</h3>
+            <div class="law-list">
+                <div class="law-item">
+                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                        <span>中华人民共和国劳动法</span>
+                        <span class="law-date">1994</span>
+                    </a>
+                </div>
+                                <div class="law-item">
+                                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                                        <span>中华人民共和国劳动合同法</span>
+                                        <span class="law-date">2007</span>
+                                    </a>
+                                </div>
+                                <div class="law-item">
+                                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                                        <span>中华人民共和国社会保险法</span>
+                                        <span class="law-date">2018修正</span>
+                                    </a>
+                                </div>
+                                <div class="law-item">
+                                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                                        <span>中华人民共和国工会法</span>
+                                        <span class="law-date">2021修正</span>
+                                    </a>
+                                </div>
+                                <div class="law-item">
+                                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                                        <span>中华人民共和国妇女权益保障法</span>
+                                        <span class="law-date">2023修订</span>
+                                    </a>
+                                </div>
+                                <div class="law-item">
+                                    <a href="https://www.pkulaw.com/law/2c90842b6d3e0d4a016d3e3a1e9b0001" target="_blank">
+                                        <span>中华人民共和国未成年人保护法</span>
+                                        <span class="law-date">2020修订</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <footer>
+                        <div class="footer-content">
+                            <p>© 2025 法学教育信息检索平台 | 致力于推动法学教育智能化发展</p>
+                            <div class="footer-links">
+                                <a href="#">关于我们</a>
+                                <a href="#">隐私政策</a>
+                                <a href="#">使用条款</a>
+                                <a href="#">联系我们</a>
+                            </div>
+                        </div>
+                    </footer>
+                    <script src="scripts.js"></script>
+                </body>
+                </html>
