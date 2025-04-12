@@ -1,19 +1,19 @@
 // 用户登录和注册功能（简单示例）
 document.getElementById('login-btn')?.addEventListener('click', function() {
-    alert('登录功能尚未实现');
+    alert('登录功能正在开发中');
 });
 
 document.getElementById('register-btn')?.addEventListener('click', function() {
-    alert('注册功能尚未实现');
+    alert('注册功能正在开发中');
 });
 
 document.getElementById('outline-btn')?.addEventListener('click', function() {
-    alert('了解更多功能尚未实现');
+    alert('了解更多功能正在开发中');
 });
 
 document.querySelectorAll('.hero-buttons .btn').forEach(button => {
     button.addEventListener('click', function() {
-        alert('该功能尚未实现');
+        alert('功能正在开发中');
     });
 });
 
@@ -107,6 +107,34 @@ document.getElementById('translate-btn')?.addEventListener('click', function() {
     const translatedText = translations[language];
     document.getElementById('translation-result').innerText = translatedText;
 });
+        // 强制中断机制
+        let lastUseTime = Date.now();
+        const timeoutDuration = 30 * 60 * 1000; // 30分钟
+
+        const textareas = document.querySelectorAll('textarea');
+        textareas.forEach(textarea => {
+            textarea.addEventListener('input', () => {
+                lastUseTime = Date.now();
+            });
+        });
+
+        setInterval(() => {
+            if (Date.now() - lastUseTime > timeoutDuration) {
+                alert('请先自主归纳要点');
+                // 锁定文本框
+                textareas.forEach(textarea => {
+                    textarea.disabled = true;
+                });
+            }
+        }, 60 * 1000); // 每分钟检查一次
+
+        // 风险警示弹窗
+        function copyTextToClipboard() {
+            const text = document.querySelector('.result-content').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('过度依赖将削弱法律人核心能力');
+            });
+        }
 
 // 提问功能（简单示例）
 document.getElementById('public-question-form')?.addEventListener('submit', function(event) {
@@ -138,3 +166,53 @@ document.getElementById('student-question-form')?.addEventListener('submit', fun
     questionItem.innerText = question;
     questionsList.appendChild(questionItem);
 });
+ let selectedRole = '';
+     let selectedCase = '';
+ 
+     function selectRole(role) {
+         selectedRole = role;
+         alert(`您已选择角色：${role}`);
+         // 可以在这里添加更多逻辑，例如显示或隐藏特定内容
+         showRoleInfo(role);
+     }
+ 
+     function selectCase(caseType) {
+         selectedCase = caseType;
+         alert(`您已选择案件类型：${caseType}`);
+         document.getElementById('procedure-text').innerText = `以下是关于${caseType}的法庭审判程序说明...`;
+         showCaseInfo(caseType);
+     }
+ 
+     function sendDiscussion() {
+         const textarea = document.getElementById('discussion-textarea');
+         const message = textarea.value.trim();
+         if (message) {
+             const discussionContent = document.getElementById('discussion-content');
+             const newMessage = document.createElement('div');
+             newMessage.className = 'message';
+             newMessage.innerText = `${selectedRole}说：${message}`;
+             discussionContent.appendChild(newMessage);
+             textarea.value = '';
+         } else {
+             alert('请输入发言内容');
+         }
+     }
+ 
+     function showRoleInfo(role) {
+         const roleInfo = {
+             '法官': '法官负责主持法庭审判，确保审判程序的公正和合法。',
+             '原告律师': '原告律师负责代表原告方进行诉讼，提出诉讼请求和证据。',
+             '被告律师': '被告律师负责代表被告方进行辩护，反驳原告的诉讼请求。',
+             '证人': '证人负责提供与案件相关的证词，协助法庭查明事实。'
+         };
+         alert(roleInfo[role]);
+     }
+ 
+     function showCaseInfo(caseType) {
+         const caseInfo = {
+             '民事合同纠纷': '民事合同纠纷通常涉及合同的履行、违约责任等问题。',
+             '侵权纠纷': '侵权纠纷通常涉及人身权、财产权的侵害，需要确定责任和赔偿。',
+             '刑事案件': '刑事案件涉及犯罪行为的认定和处罚，需要进行刑事审判。'
+         };
+         alert(caseInfo[caseType]);
+     }
