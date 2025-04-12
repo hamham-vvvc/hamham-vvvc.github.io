@@ -17,11 +17,12 @@
            </a>
            <ul class="nav-links">
                <li><a href="index.html">首页</a></li>
-              <li><a href="law.html">法律法规</a></li>
-              <li><a href="search.html">判例经纬</a></li>
+               <li><a href="law.html">法律法规</a></li>
+               <li><a href="search.html" class="active">判例经纬</a></li>
                <li><a href="teaching.html">教学资源</a></li>
-               <li><a href="paper.html" class="active">论文辅助写作</a></li>
+               <li><a href="paper.html">论文辅助写作</a></li>
                <li><a href="question.html">提问板块</a></li>
+           	   <li><a href="mootcourt.html">模拟法庭</a></li>
            </ul>
         </div>
     </nav>
@@ -49,7 +50,7 @@
                         <div class="result-container">
                             <div class="result-header">
                                 <h4>润色结果</h4>
-                                <button id="copy-polish" class="btn-icon">
+                                <button id="copy-polish" class="btn-icon" onclick="copyTextToClipboard()">
                                     <i class="far fa-copy"></i> 复制
                                 </button>
                             </div>
@@ -76,7 +77,7 @@
                         <div class="result-container">
                             <div class="result-header">
                                 <h4>相关法条建议</h4>
-                                <button id="copy-supplement" class="btn-icon">
+                                <button id="copy-supplement" class="btn-icon" onclick="copyTextToClipboard()">
                                     <i class="far fa-copy"></i> 复制
                                 </button>
                             </div>
@@ -130,7 +131,7 @@
                         <div class="result-container">
                             <div class="result-header">
                                 <h4>翻译结果</h4>
-                                <button id="copy-translation" class="btn-icon">
+                                <button id="copy-translation" class="btn-icon" onclick="copyTextToClipboard()">
                                     <i class="far fa-copy"></i> 复制
                                 </button>
                             </div>
