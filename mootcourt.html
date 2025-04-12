@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟法庭 - 法学教育信息检索平台</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="logo">
+               <i class="fas fa-balance-scale"></i>
+               <span>法鼎鸣声</span>
+           </a>
+           <ul class="nav-links">
+               <li><a href="index.html">首页</a></li>
+              <li><a href="law.html">法律法规</a></li>
+              <li><a href="search.html">判例经纬</a></li>
+               <li><a href="teaching.html">教学资源</a></li>
+               <li><a href="paper.html">论文辅助写作</a></li>
+               <li><a href="question.html">提问板块</a></li>
+               <li><a href="court.html" class="active">模拟法庭</a></li>
+           </ul>
+        </div>
+    </nav>
+    
+    <main class="court-main">
+        <div class="container">
+            <h2 class="section-title">模拟法庭</h2>
+            <p class="section-subtitle">体验法庭审判流程，提升法律实践能力</p>
+            
+            <!-- 角色选择 -->
+            <div class="role-selection">
+                <h3>选择您的角色</h3>
+                <div class="role-options">
+                    <button class="role-btn" onclick="selectRole('法官')">法官</button>
+                    <button class="role-btn" onclick="selectRole('原告律师')">原告律师</button>
+                    <button class="role-btn" onclick="selectRole('被告律师')">被告律师</button>
+                    <button class="role-btn" onclick="selectRole('证人')">证人</button>
+                </div>
+            </div>
+            
+            <!-- 案件选择 -->
+            <div class="case-selection">
+                <h3>选择案件类型</h3>
+                <div class="case-options">
+                    <button class="case-btn" onclick="selectCase('民事合同纠纷')">民事合同纠纷</button>
+                    <button class="case-btn" onclick="selectCase('侵权纠纷')">侵权纠纷</button>
+                    <button class="case-btn" onclick="selectCase('刑事案件')">刑事案件</button>
+                </div>
+            </div>
+            
+            <!-- 说明 -->
+            <div class="court-procedure">
+                <h3>法庭审判程序说明</h3>
+                <p id="procedure-text">本部分将为您提供法庭审判流程的详尽指南。审判过程涵盖多个关键阶段：开庭、证据提交、法庭辩论等。每个环节都旨在确保审判的公正性和透明性，同时保障各方当事人的合法权益。通过遵循这些标准化流程，法庭能够有效地审理案件，查明事实真相，并作出公正的裁决。</p>
+            </div>
+            
+            <!-- 互动讨论 -->
+            <div class="discussion-platform">
+                <h3>互动讨论</h3>
+                <textarea id="discussion-textarea" placeholder="请输入您的发言..."></textarea>
+                <button id="send-btn" onclick="sendDiscussion()">发言</button>
+                <div class="discussion-content" id="discussion-content">
+                    <!-- 动态显示用户的发言 -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 法学教育信息检索平台 | 致力于推动法学教育智能化发展</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">隐私政策</a>
+                <a href="#">使用条款</a>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+    </footer>
+	 <script src="scripts.js"></script>
+</body>
+</html>
